@@ -6,9 +6,9 @@
 
   1. first check if the berkeley ABC library exists.
 
-    if it doesn't, get the [source code of berkeley ABC project](https://bitbucket.org/alanmi/abc).
+      if it doesn't, get the [source code of berkeley ABC project](https://bitbucket.org/alanmi/abc).
 
-    create library file according the readme file of berkeley ABC project.
+      create library file according the readme file of berkeley ABC project.
 
   2. modify the makefile variables related to ABC project to fit your need. ( variables with prefix **abc** )
 
