@@ -16,7 +16,7 @@ abcFlags=""
 cd ${abcDir}
 
 # get abc compile flags
-for string in $( make | grep "CFLAGS" ); do 
+for string in $( make -n | grep "CFLAGS" ); do 
 
    if [[ ${string} =~ '-D' ]]; then
 

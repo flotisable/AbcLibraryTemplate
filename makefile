@@ -14,11 +14,14 @@ PROG			:= test
 all: $(PROG)
 
 # abc library should be linked after the main function, since there is main function in abc library
-$(PROG): main.o $(abcLibDir)/libabc.a 
+$(PROG): main.o $(abcLib)
 	$(LD) $(LDFLAGS) -o $@ $^
 
 main.o: main.cpp
 	$(CXX) -c $(CXXFLAGS) -o $@ $<
 
+tags:
+	ctags -R . $(abcSrcDir)
+
 clean:
-	rm $(PROG) *.o
+	rm $(PROG) *.o tags
